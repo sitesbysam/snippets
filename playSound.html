@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <!-- Title of page -->
+        <title>sbs snippet - playMusic</title>
+    </head>
+
+    <!-- HTML content -->
+    <body>
+
+        <img onclick="playPause('header')" id="play" src="assets/">
+
+        <!-- JavaScript content -->
+        <script>
+            var sound = new Audio('assets/music/');
+    
+            //Do something (change image) when song 
+            sound.onended = function() {
+                sound.pause();
+                document.getElementById("header").src = "assets/webtitle-default.png";
+            }
+    
+            //Plays sound; id = id of element to mondify (if any)
+            function play_pause(id){
+    
+                if (!sound.paused){
+                    song.pause();
+                    document.getElementById("header").src = "assets/webtitle-default.png";
+                } else {
+                    var rand = Math.floor(Math.random() * 5);
+                    switch (rand) {
+                        case 0:
+                            document.getElementById("header").src = "assets/webtitle-0.png";
+                            break;
+                        case 1:
+                            document.getElementById("header").src = "assets/webtitle-1.png";
+                            break;
+                        case 2:
+                            document.getElementById("header").src = "assets/webtitle-2.png";
+                            break;
+                        case 3:
+                            document.getElementById("header").src = "assets/webtitle-3.png";
+                            break;
+                        case 4:
+                            document.getElementById("header").src = "assets/webtitle-4.png";
+                            break;
+                        default: 
+                            document.getElementById("header").src = "assets/webtitle-default.png";
+                            break;
+                    }
+                    song.play();
+                }
+            }
+        </script>
+    </body>
+
+    <!-- CSS content -->
+    <style>
+
+    </style>
+</html>

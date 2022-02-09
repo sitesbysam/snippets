@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <!-- Title of page -->
+        <title>sbs snippet - iconRow</title>
+    </head>
+
+    <!-- HTML content -->
+    <body>
+
+        <!-- Icons -->
+        <div id="icon-block">
+            <a class="icons-link" id="website-link" href="https://andrewcornishmusiccom.wordpress.com/"><img class="icons-img" id="website" onmouseenter="icon_fade('website', true)" onmouseleave="icon_fade('website', false)" src="assets/icons/website.png"></a>
+            <a class="icons-link" id="email-link" href="mailto:music@andrewcornish.me"><img id="email" onmouseenter="icon_fade('email', true)" onmouseleave="icon_fade('email', false)" class="icons-img" src="assets/icons/email.png"></a>
+            <a class="icons-link" id="instagram-link" href="https://www.instagram.com/andrewcornishmusic/"><img id="instagram" onmouseenter="icon_fade('instagram', true)" onmouseleave="icon_fade('instagram', false)" class="icons-img" src="assets/icons/instagram.png"></a>
+        </div>
+
+    <!-- HTML end -->
+<!-- JavaScript content -->
+<script>
+    function icon_fade(id, state) {
+        switch(id) {
+            case '':
+                if (state) {
+                    document.getElementById(id).src = "assets/icons/";
+                } else {
+                    document.getElementById(id).src = "assets/icons/";
+                }
+                break;
+            case '':
+                if (state) {
+                    document.getElementById(id).src = "assets/icons/";
+                } else {
+                    document.getElementById(id).src = "assets/icons/";
+                }
+            default:
+                break;
+        }
+    }
+</script>
+<!-- Javascript end -->
+    </body>
+
+<!-- CSS content -->
+<style>
+    #icon-block {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 20px;
+        width: 290px;
+    } .icons-link {
+        display: block;
+        margin: 10px;
+        max-width: 75px;
+        max-height: 75px;
+        border-radius: 10px;
+        background-image: url(assets/background-blurred.jpg);
+    } .icons-img {
+        display: block;
+        max-width: 75px;
+        max-height: 75px;
+    }
+</style>
+<!-- CSS end -->
+</html>
